@@ -3,6 +3,8 @@ import Home from "./pages/Home"
 import GameList from "./pages/GameList"
 import NewGame from "./pages/NewGame"
 import Game from "./pages/Game"
+import { Provider } from "react-redux"
+import { store } from "./stores/store"
 
 function App() {
 
@@ -14,16 +16,19 @@ function App() {
 
 
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/games' element={<GameList/>} />
-        <Route path='game/new' element={<NewGame/>} />
-        <Route path='game/:gameId' element={<Game />} />
+    <Provider store={store}>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/games' element={<GameList/>} />
+          <Route path='game/new' element={<NewGame/>} />
+          <Route path='game/:gameId' element={<Game />} />
 
-        <Route path='/*' element={<NoSuchRoute />} />
-      </Routes>
-    </BrowserRouter>
+          <Route path='/*' element={<NoSuchRoute />} />
+        </Routes>
+      </BrowserRouter>
+    </Provider>
+
   )
 }
 
