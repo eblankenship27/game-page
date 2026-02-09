@@ -6,6 +6,8 @@ import AliensSky from "./AliensSky";
 
 import React from "react";
 import CurrentScore from "./CurrentScore";
+import AliensFlyingObject from "./AliensFlyingObject";
+import AliensPlayerLife from "./AliensPlayerLife";
 
 interface AliensCanvasProps {
     angle: number;
@@ -34,6 +36,9 @@ const AliensCanvas = (props: AliensCanvasProps) => {
             <AliensCannonBase />
             <AlienCannonBall position={{ x: 0, y: -100}} />
             <CurrentScore score={15} />
+            <AliensFlyingObject position={{ x:-150, y:-300}} />
+            <AliensFlyingObject position={{ x:150, y:-300}} />
+            <AliensPlayerLife position={{ x: -300, y: 35}} />
         </svg>
     )
 }

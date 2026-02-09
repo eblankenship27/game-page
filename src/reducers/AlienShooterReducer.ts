@@ -15,7 +15,7 @@ export const aliensShooterSlice = createSlice({
             const { x, y } = action.payload;
             const angle = calculateSVGAngle(0, 0, x, y);
             state.angle = angle;
-        }
+        },
     }
 })
 
