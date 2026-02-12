@@ -11,12 +11,21 @@ import AliensPlayerLife from "./AliensPlayerLife";
 
 interface AliensCanvasProps {
     angle: number;
+    gameWidth: number;
+    gameHeight: number;
     trackMouse: (event: React.MouseEvent<SVGSVGElement, MouseEvent>) => void;
 };
 
 
 const AliensCanvas = (props: AliensCanvasProps) => {
-    const viewBox = `${window.innerWidth / -2} ${100 - window.innerHeight} ${window.innerWidth} ${window.innerHeight}`;
+    const gameHeight = 1200
+    const viewBox = `${props.gameWidth / -2} ${100 - gameHeight} ${props.gameWidth} ${gameHeight}`;
+
+    const style = {
+        border: '1px solid black',
+        width: `${props.gameWidth / 2}px`,
+        height: `${props.gameHeight / 2}px`,
+    };
 
     return (
         <svg
@@ -24,6 +33,7 @@ const AliensCanvas = (props: AliensCanvasProps) => {
             preserveAspectRatio="xMaxYMax"
             onMouseMove={props.trackMouse}
             viewBox={viewBox}
+            style={style}
         >
             <defs>
                 <filter id="shadow">

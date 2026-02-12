@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { aliensShooterSlice } from "../reducers/AlienShooterReducer";
+import { aliensShooterSlice } from "../hooks/AlienShooterReducer";
 
 
 export const store = configureStore({

@@ -1,3 +1,4 @@
+import type { AliensShooterView } from "../utils/games/aliensShooter.types";
 
 
 export type svgCoord = {
@@ -11,3 +12,6 @@ export type cubicBezierCurve = {
     endingControlPoint: svgCoord,
     endingAxis: svgCoord,
 }
+
+export type TaggedGameView = 
+    | { type: 'aliens', view: AliensShooterView}
