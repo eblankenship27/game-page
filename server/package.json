@@ -1,0 +1,25 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Backend Server for the Game page",
+  "keywords": [
+    "Node",
+    "REST",
+    "API",
+    "Server",
+    "http"
+  ],
+  "license": "ISC",
+  "author": "Evan Blankenship",
+  "type": "commonjs",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6"
+  }
+}
